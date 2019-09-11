@@ -280,5 +280,18 @@ class MusicPlayerBase{
     );
   }
 
+  void dispose(){
+    stopMusic();
+    _isAudioSeeking$.close();
+    _songs$.close();
+    _albums$.close();
+    _playerState$.close();
+    _playlist$.close();
+    _position$.close();
+    _playback$.close();
+    _favorites$.close();
+  }
+
+
 }
 
