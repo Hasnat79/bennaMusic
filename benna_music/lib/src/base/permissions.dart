@@ -11,7 +11,7 @@ class PermissionsBase{
     _storagePermissionStatus$ = BehaviorSubject();
     requestStoragePermission();
   }
-  Future requestPermission() async{
+  Future requestStoragePermission() async{
     Map _permission =
         await PermissionHandler().requestPermissions([
           PermissionGroup.storage,
@@ -23,5 +23,5 @@ class PermissionsBase{
   void dispose(){
     _storagePermissionStatus$.close();
   }
-  
+
 }
