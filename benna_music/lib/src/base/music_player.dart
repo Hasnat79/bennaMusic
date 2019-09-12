@@ -280,6 +280,7 @@ class MusicPlayerBase{
     );
   }
 
+
   void dispose(){
     stopMusic();
     _isAudioSeeking$.close();
@@ -291,6 +292,7 @@ class MusicPlayerBase{
     _playback$.close();
     _favorites$.close();
   }
+
 
 
 }
